@@ -292,7 +292,7 @@ const FeaturesSection = () => {
         <>
           Everything you need to build highly profitable campaigns.
           <Br />
-          Whether you"re a seasoned marketer, or just learing the ropes as a beginner...
+          Whether you&apos;re a seasoned marketer, or just learing the ropes as a beginner...
           <Br />
           <Br />
           <Box fontSize="24px">

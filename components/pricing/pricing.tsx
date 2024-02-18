@@ -59,7 +59,9 @@ export const Pricing: React.FC<PricingProps> = (props) => {
             >
               <PricingFeatures>
                 {plan.features.map((feature, i) =>
-                  feature ? <PricingFeature key={i} {...feature} /> : <br />
+                  <React.Fragment key={i}>
+                    {feature ? <PricingFeature key={i} {...feature} /> : <br />}
+                  </React.Fragment>
                 )}
               </PricingFeatures>
               {plan?.action?.label &&
