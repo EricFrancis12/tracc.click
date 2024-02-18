@@ -1,11 +1,9 @@
 import type { NextPage } from "next"
 import Head from "next/head"
-import Image from "next/image"
 import Link from "next/link"
 
 import { compareDesc, format, parseISO } from "date-fns"
-import { allPosts } from "contentlayer/generated"
-import { useMDXComponent } from "next-contentlayer/hooks"
+import { allPosts } from "posts/allPosts"
 
 const Blog: NextPage = ({ posts }: any) => {
   return (

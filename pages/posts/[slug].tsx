@@ -1,10 +1,8 @@
 import Head from "next/head"
 import Link from "next/link"
 import { format, parseISO } from "date-fns"
-import { allPosts } from "contentlayer/generated"
+import { allPosts } from "posts/allPosts"
 import { NextPage } from "next"
-
-import { useMDXComponent } from "next-contentlayer/hooks"
 
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url)
@@ -24,8 +22,6 @@ export async function getStaticProps({ params }) {
 }
 
 const PostLayout: NextPage = ({ post }: any) => {
-  const MDXContent = useMDXComponent(post.body.code)
-
   return (
     <>
       <Head>
@@ -46,7 +42,7 @@ const PostLayout: NextPage = ({ post }: any) => {
           </time>
         </div>
         <div className="cl-post-body">
-          <MDXContent />
+          Sample post content.
         </div>
       </article>
     </>
